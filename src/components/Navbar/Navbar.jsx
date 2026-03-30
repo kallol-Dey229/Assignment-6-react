@@ -7,7 +7,7 @@ const Navbar = () => {
       <div className="container mx-auto px-30 flex justify-between items-center">
         
         <div className="flex-1">
-          <a className="btn btn-ghost text-xl"><span className='text-3xl font-bold bg-linear-to-r from-purple-600 to-purple-400 bg-clip-text text-transparent'>DigiTools</span></a>
+          <a className="btn btn-ghost text-xl"><span className='text-3xl font-bold bg-linear-to-r from-purple-800 to-purple-500 bg-clip-text text-transparent'>DigiTools</span></a>
         </div>
 
         <div className='mr-70'>
