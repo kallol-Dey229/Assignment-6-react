@@ -29,7 +29,7 @@ const Products = ({dataPromise, cartCount, setCartCount}) => {
 
             {
                 selectedType === 'products' ? (
-                    <ProductCardContainer cardData={cardData} cartCount={cartCount} setCartCount={setCartCount} setSelectedCart={setSelectedCart} selectedCart={selectedCart}></ProductCardContainer>) : (<CartCard selectedCart={selectedCart}></CartCard>)
+                    <ProductCardContainer cardData={cardData} cartCount={cartCount} setCartCount={setCartCount} setSelectedCart={setSelectedCart} selectedCart={selectedCart}></ProductCardContainer>) : (<CartCard selectedCart={selectedCart} setSelectedCart={setSelectedCart} cartCount={cartCount} setCartCount={setCartCount} ></CartCard>)
             }
         </div>
     );
