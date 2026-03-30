@@ -2,10 +2,11 @@ import React, { use, useState } from 'react';
 import CartCard from '../CartCard/CartCard';
 import ProductCardContainer from '../ProductCardContainer/ProductCardContainer';
 
-const Products = ({dataPromise}) => {
+const Products = ({dataPromise, cartCount, setCartCount}) => {
 
     const cardData = use(dataPromise);
     const [selectedType, setSelectedType] =useState('products');
+    const [selectedCart, setSelectedCart] = useState([]); 
 
     return (
         <div>
@@ -20,7 +21,7 @@ const Products = ({dataPromise}) => {
                         className={`btn ${selectedType === 'products' ? "btn-primary " :""} rounded-4xl`}>Products</button>
                         <button 
                         onClick={()=>setSelectedType('cart')}
-                        className={`btn ${selectedType === 'cart' ? "btn-primary " :""} rounded-4xl`}>Cart(2)</button>
+                        className={`btn ${selectedType === 'cart' ? "btn-primary " :""} rounded-4xl`}>Cart({selectedCart.length})</button>
                     </div>
                 </div>
                 
@@ -28,7 +29,7 @@ const Products = ({dataPromise}) => {
 
             {
                 selectedType === 'products' ? (
-                    <ProductCardContainer cardData={cardData}></ProductCardContainer>) : (<CartCard></CartCard>)
+                    <ProductCardContainer cardData={cardData} cartCount={cartCount} setCartCount={setCartCount} setSelectedCart={setSelectedCart} selectedCart={selectedCart}></ProductCardContainer>) : (<CartCard selectedCart={selectedCart}></CartCard>)
             }
         </div>
     );

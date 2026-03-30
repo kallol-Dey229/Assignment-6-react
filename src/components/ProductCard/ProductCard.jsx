@@ -1,8 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 import CardFeature from './CardFeature';
 
-const ProductCard = ({ pricing }) => {
+const ProductCard = ({ pricing, setCartCount, cartCount, setSelectedCart, selectedCart }) => {
     const { name, tagType, icon, price, description, features } = pricing;
+    const [isSelected, setIsSelected] = useState(false);
+
+    const handleBuyBtn = () => {
+        alert(`${name} is selected`);
+        setIsSelected(true);
+        setCartCount(cartCount + 1);
+        setSelectedCart([...selectedCart,pricing])
+    }
     return (
         <div>
             <div className="card w-96 bg-base-100 shadow-sm">
@@ -20,11 +28,12 @@ const ProductCard = ({ pricing }) => {
 
                     <ul className="mt-6 flex flex-col gap-2 text-xs">
                         {
-                            features.map((feature,index) => <CardFeature key={index} feature={feature}></CardFeature>)
+                            features.map((feature, index) => <CardFeature key={index} feature={feature}></CardFeature>)
                         }
                     </ul>
                     <div className="mt-6">
-                        <button className="btn btn-primary btn-block rounded-3xl">Buy Now</button>
+                        <button className="btn btn-primary btn-block rounded-3xl"
+                            onClick={handleBuyBtn} disabled={isSelected ? true : false}>{isSelected === true ? "Selected" : "Buy Now"}</button>
                     </div>
                 </div>
             </div>
