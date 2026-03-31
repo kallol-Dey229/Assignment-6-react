@@ -5,7 +5,7 @@ const ProductCardContainer = ({cardData, cartCount, setCartCount, setSelectedCar
     return (
         <div>
             <div className='p-40'>
-            <div className=''>
+            <div>
                     <div className='grid grid-cols-3 gap-7'>
                         {
                             cardData.map(pricing =><ProductCard key={pricing.id} pricing={pricing} cartCount={cartCount} setCartCount={setCartCount} selectedCart={selectedCart} setSelectedCart={setSelectedCart} setTotalPrice={setTotalPrice} totalPrice={totalPrice}></ProductCard>)
