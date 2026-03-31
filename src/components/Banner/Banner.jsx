@@ -2,7 +2,7 @@ import React from 'react';
 import { PiLineVerticalThin } from 'react-icons/pi';
 import { VscDebugStart } from 'react-icons/vsc';
 import bannerImg from '../../assets/products/banner.png';
-import bannerDotIcon from '../../assets/products/Group 5.png'
+import bannerDotIcon from '../../assets/products/Group 5.png';
 
 const Banner = () => {
     return (
