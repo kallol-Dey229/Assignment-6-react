@@ -5,9 +5,11 @@ import Navbar from './components/Navbar/Navbar'
 import Products from './components/Products/Products'
 import ProductCardContainer from './components/ProductCardContainer/ProductCardContainer';
 import GetStared from './components/GetStarted/GetStared';
+import TransparentPricings from './components/TransparentPricings/TransparentPricings';
 
 const dataPromise = fetch('Data.json').then(res => res.json());
 const GetStaredDataPromise = fetch('GetStartedData.json').then(res=>res.json());
+const TransparentPricingPromise = fetch('TransparentPricing.json').then(res=>res.json());
 
 function App() {
 
@@ -24,6 +26,10 @@ function App() {
 
       <Suspense fallback={<span className="loading loading-dots loading-xl"></span>}>
         <GetStared GetStaredDataPromise={GetStaredDataPromise}></GetStared>
+      </Suspense>
+
+      <Suspense fallback={<span className="loading loading-dots loading-xl"></span>}>
+        <TransparentPricings TransparentPricingPromise={TransparentPricingPromise}></TransparentPricings>
       </Suspense>
 
     </>
