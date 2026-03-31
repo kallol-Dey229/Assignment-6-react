@@ -6,7 +6,7 @@ const TransparentCard = ({transparentPricing}) => {
     return (
         <div>
             <div className={`card w-96 ${type === 'Pro'? "bg-linear-to-r from-[#4F39F6] to-[#9514FA]":"bg-base-100"} shadow-sm`}>
-                <div className="card-body">
+                <div className={`card-body ${id === 2 ? "text-white":"text-black"}`}>
 
                     <div className="space-y-3">
                         

@@ -6,6 +6,7 @@ import Products from './components/Products/Products'
 import ProductCardContainer from './components/ProductCardContainer/ProductCardContainer';
 import GetStared from './components/GetStarted/GetStared';
 import TransparentPricings from './components/TransparentPricings/TransparentPricings';
+import TransformWorkflow from './components/TransformWorkflow/TransformWorkflow';
 
 const dataPromise = fetch('Data.json').then(res => res.json());
 const GetStaredDataPromise = fetch('GetStartedData.json').then(res=>res.json());
@@ -31,6 +32,8 @@ function App() {
       <Suspense fallback={<span className="loading loading-dots loading-xl"></span>}>
         <TransparentPricings TransparentPricingPromise={TransparentPricingPromise}></TransparentPricings>
       </Suspense>
+
+      <TransformWorkflow></TransformWorkflow>
 
     </>
   )
