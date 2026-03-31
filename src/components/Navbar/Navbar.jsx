@@ -2,7 +2,7 @@ import React from 'react';
 
 const Navbar = ({cartCount}) => {
   return (
-    <div className="navbar bg-base-100 shadow-sm fixed">
+    <div className="navbar bg-base-100 shadow-sm fixed top-0 z-50">
       
       <div className="container mx-auto px-30 flex justify-between items-center">
         
