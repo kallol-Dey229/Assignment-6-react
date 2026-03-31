@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 import CardFeature from './CardFeature';
+import { toast } from 'react-toastify';
 
 const ProductCard = ({ pricing, setCartCount, cartCount, setSelectedCart, selectedCart, totalPrice, setTotalPrice }) => {
     const { name, tagType, icon, price, description, features, numericPrice } = pricing;
     const [isSelected, setIsSelected] = useState(false);
 
     const handleBuyBtn = () => {
-        alert(`${name} is selected`);
+        toast(`${name} is selected`);
         setIsSelected(true);
         setCartCount(cartCount + 1);
         setSelectedCart([...selectedCart, pricing]);
@@ -16,8 +17,10 @@ const ProductCard = ({ pricing, setCartCount, cartCount, setSelectedCart, select
         <div>
             <div className="card w-96 bg-base-100 shadow-sm">
                 <div className="card-body">
-                    <div className='flex justify-end'>
-                        <span className="badge badge-xs badge-warning text-[14px] p-2">{tagType}</span>
+                    <div className="absolute top-4 right-4">
+                        <span className={`${tagType === 'Best Seller' ? "bg-yellow-100 text-yellow-700": tagType === 'Popular' ? "bg-blue-100 text-blue-600":"bg-green-100 text-green-600" } px-4 py-1 rounded-full text-sm font-semibold shadow`}>
+                            {tagType}
+                        </span>
                     </div>
 
                     <div className="space-y-3">

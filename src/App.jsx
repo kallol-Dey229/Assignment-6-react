@@ -8,6 +8,7 @@ import GetStared from './components/GetStarted/GetStared';
 import TransparentPricings from './components/TransparentPricings/TransparentPricings';
 import TransformWorkflow from './components/TransformWorkflow/TransformWorkflow';
 import Footer from './components/Footer/Footer';
+import { ToastContainer } from 'react-toastify';
 
 const dataPromise = fetch('Data.json').then(res => res.json());
 const GetStaredDataPromise = fetch('GetStartedData.json').then(res=>res.json());
@@ -37,6 +38,8 @@ function App() {
       <TransformWorkflow></TransformWorkflow>
 
       <Footer></Footer>
+
+      <ToastContainer />
 
     </>
   )

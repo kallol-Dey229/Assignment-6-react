@@ -1,4 +1,5 @@
 import React from 'react';
+import { toast } from 'react-toastify';
 
 const CartCard = ({ selectedCart, setSelectedCart, cartCount, setCartCount, totalPrice, setTotalPrice }) => {
 
@@ -14,7 +15,7 @@ const CartCard = ({ selectedCart, setSelectedCart, cartCount, setCartCount, tota
         setSelectedCart([]);
         setCartCount(0);
         setTotalPrice(0);
-        alert(cartCount === 0 ? "no products selected": "removed all of the products");
+        toast.error(cartCount === 0 ? "no products selected": "removed all of the products");
     }
     return (
 
