@@ -1,0 +1,3 @@
+A React-based web application for exploring and purchasing premium digital tools. Users can browse products, view detailed features, add items to a cart,
+and see real-time price updates. The project includes dynamic UI components, conditional rendering, and responsive design using Tailwind CSS,
+providing a smooth and interactive user experience.
