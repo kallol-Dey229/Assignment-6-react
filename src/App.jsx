@@ -7,6 +7,7 @@ import ProductCardContainer from './components/ProductCardContainer/ProductCardC
 import GetStared from './components/GetStarted/GetStared';
 import TransparentPricings from './components/TransparentPricings/TransparentPricings';
 import TransformWorkflow from './components/TransformWorkflow/TransformWorkflow';
+import Footer from './components/Footer/Footer';
 
 const dataPromise = fetch('Data.json').then(res => res.json());
 const GetStaredDataPromise = fetch('GetStartedData.json').then(res=>res.json());
@@ -34,6 +35,8 @@ function App() {
       </Suspense>
 
       <TransformWorkflow></TransformWorkflow>
+
+      <Footer></Footer>
 
     </>
   )
