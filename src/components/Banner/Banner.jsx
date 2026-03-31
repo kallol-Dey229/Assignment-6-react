@@ -1,13 +1,15 @@
 import React from 'react';
 import { PiLineVerticalThin } from 'react-icons/pi';
 import { VscDebugStart } from 'react-icons/vsc';
+import bannerImg from '../../assets/products/banner.png';
+import bannerDotIcon from '../../assets/products/Group 5.png'
 
 const Banner = () => {
     return (
         <div>
             <div className='flex gap-35 p-35'>
                 <div className='left space-y-5 my-auto'>
-                <div className='bg-blue-100 flex items-center pl-2 w-70 p-1 rounded-4xl gap-2'><img src="/src/assets/Group 5.png" alt="" /><p className='bg-linear-to-r from-purple-800 to-purple-600 bg-clip-text text-transparent'>New: AI-Powered Tools Available</p></div>
+                <div className='bg-blue-100 flex items-center pl-2 w-70 p-1 rounded-4xl gap-2'><img src={bannerDotIcon} alt="" /><p className='bg-linear-to-r from-purple-800 to-purple-600 bg-clip-text text-transparent'>New: AI-Powered Tools Available</p></div>
                 <h1 className='text-7xl font-bold'>Supercharge Your <br />Digital Workflow</h1>
                 <p>Access premium AI tools, design assets, templates, and productivity <br />
                     software—all in one place. Start creating faster today. <br /> Explore Products
@@ -19,7 +21,7 @@ const Banner = () => {
             </div>
 
             <div className="right">
-                <img src="/src/assets/banner.png" alt="" />
+                <img src={bannerImg} alt="" />
             </div>
             </div>
 

@@ -1,4 +1,5 @@
 import React from 'react';
+import cartImg from '../../assets/products/shopping-cart.png'
 
 const Navbar = ({cartCount}) => {
   return (
@@ -23,7 +24,7 @@ const Navbar = ({cartCount}) => {
         <div className="flex-none space-x-1">
           <div className="dropdown dropdown-end">
       <div className="relative flex items-center">
-  <img className="w-6" src="/src/assets/products/shopping-cart.png" alt="" />
+  <img className="w-6" src={cartImg} alt="" />
 
   <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs px-1.5 py-0.5 rounded-full">
     {cartCount}
