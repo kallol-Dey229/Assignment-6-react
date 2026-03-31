@@ -7,6 +7,7 @@ const Products = ({dataPromise, cartCount, setCartCount}) => {
     const cardData = use(dataPromise);
     const [selectedType, setSelectedType] =useState('products');
     const [selectedCart, setSelectedCart] = useState([]); 
+    const [totalPrice, setTotalPrice] = useState(0);
 
     return (
         <div>
@@ -29,7 +30,7 @@ const Products = ({dataPromise, cartCount, setCartCount}) => {
 
             {
                 selectedType === 'products' ? (
-                    <ProductCardContainer cardData={cardData} cartCount={cartCount} setCartCount={setCartCount} setSelectedCart={setSelectedCart} selectedCart={selectedCart}></ProductCardContainer>) : (<CartCard selectedCart={selectedCart} setSelectedCart={setSelectedCart} cartCount={cartCount} setCartCount={setCartCount} ></CartCard>)
+                    <ProductCardContainer cardData={cardData} cartCount={cartCount} setCartCount={setCartCount} setSelectedCart={setSelectedCart} selectedCart={selectedCart} setTotalPrice={setTotalPrice} totalPrice={totalPrice}></ProductCardContainer>) : (<CartCard selectedCart={selectedCart} setSelectedCart={setSelectedCart} cartCount={cartCount} setCartCount={setCartCount} totalPrice={totalPrice} setTotalPrice={setTotalPrice} ></CartCard>)
             }
         </div>
     );

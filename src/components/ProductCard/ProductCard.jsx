@@ -1,15 +1,16 @@
 import React, { useState } from 'react';
 import CardFeature from './CardFeature';
 
-const ProductCard = ({ pricing, setCartCount, cartCount, setSelectedCart, selectedCart }) => {
-    const { name, tagType, icon, price, description, features } = pricing;
+const ProductCard = ({ pricing, setCartCount, cartCount, setSelectedCart, selectedCart, totalPrice, setTotalPrice }) => {
+    const { name, tagType, icon, price, description, features, numericPrice } = pricing;
     const [isSelected, setIsSelected] = useState(false);
 
     const handleBuyBtn = () => {
         alert(`${name} is selected`);
         setIsSelected(true);
         setCartCount(cartCount + 1);
-        setSelectedCart([...selectedCart,pricing])
+        setSelectedCart([...selectedCart, pricing]);
+        setTotalPrice(totalPrice + numericPrice);
     }
     return (
         <div>
